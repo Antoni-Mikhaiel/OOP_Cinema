@@ -71,13 +71,13 @@ public static void WriteUser(String userType) throws IOException{
        File file;
         switch (userType) {
             case "Admin":
-                file = new File("C:/Users/ok/Desktop/Admins.txt");
+                file = new File("C:/Users/ok/Desktop/OOP_Cinema/Admins.txt");
                 break;
             case "Receptionist":
-                file = new File("C:/Users/ok/Desktop/Receptionists.txt");
+                file = new File("C:/Users/ok/Desktop/OOP_Cinema/Receptionists.txt");
                 break;
             default:
-                file = new File("C:/Users/ok/Desktop/Guests.txt");
+                file = new File("C:/Users/ok/Desktop/OOP_Cinema/Guests.txt");
                 break;
         }
         try(ObjectOutputStream write = new ObjectOutputStream(new FileOutputStream(file))){ //Overwrites + ensures output is closed after try-catch statement 
@@ -92,13 +92,13 @@ public static void ReadUser(String userType , Scanner input) throws IOException{
   File file;
         switch (userType) {
             case "Admin":
-                file = new File("C:/Users/ok/Desktop/Admins.txt");
+                file = new File("C:/Users/ok/Desktop/OOP_Cinema/Admins.txt");
                 break;
             case "Receptionist":
-                file = new File("C:/Users/ok/Desktop/Receptionists.txt");
+                file = new File("C:/Users/ok/Desktop/OOP_Cinema/Receptionists.txt");
                 break;
             default:
-                file = new File("C:/Users/ok/Desktop/Guests.txt");
+                file = new File("C:/Users/ok/Desktop/OOP_Cinema/Guests.txt");
                 break;
         }
         if (!file.exists()) {
@@ -180,6 +180,7 @@ public static void ReadUser(String userType , Scanner input) throws IOException{
             System.out.println("Error: Invalid credentials. Please try again.");
         }
 
+        System.out.println("I <3 H");
     // If we exit the loop without a valid login
     System.out.println("Account not found. Returning to the main menu.");
     return false;

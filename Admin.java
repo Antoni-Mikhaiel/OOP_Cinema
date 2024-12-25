@@ -3,9 +3,14 @@ import java.util.Scanner;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javaapplication1.Movie;
+import static javaapplication1.Movie.movies;
 
-public class Admin {//extends receptionist
-     
+
+public class Admin{//extends receptionist
+ //public void start(Stage primaryStage) {}
+    
+    
       public Admin() throws IOException {
         Scanner input = new Scanner(System.in);
         System.out.println("Admin Menu");
@@ -20,7 +25,7 @@ public class Admin {//extends receptionist
         int choice = input.nextInt();
         input.nextLine(); // Clear buffer
 
-        String field = "";
+        String field = " ";
 
         switch (choice) {
             case 1:
@@ -111,9 +116,9 @@ public class Admin {//extends receptionist
             }
         }
     }
-    //overload all view, edit, & remove functions
+
    public void addMovie(Scanner input) throws IOException {
-System.out.println("Enter Movie Name: ");
+    System.out.println("Enter Movie Name: ");
     String movieName = input.nextLine();
     
     System.out.println("Enter Movie Genre: ");

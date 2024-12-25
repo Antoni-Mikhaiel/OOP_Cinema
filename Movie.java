@@ -13,12 +13,14 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.time.Duration;
 
 
 
 public class Movie implements Serializable{
     private String movieName , movieGenre;
-    private int movieDuration , movieID , movieBooking ; //num of bookings per movie
+    private Duration movieDuration; 
+    private int movieID , movieBooking ; //num of bookings per movie
     private double movieRating , movieRevenue;
     public static ArrayList<Movie> movies = new ArrayList();
     
@@ -101,7 +103,7 @@ public class Movie implements Serializable{
 
  
 public static void readMovie() { 
-    File file = new File("C:/Users/ok/Desktop/MovieList.txt");
+    File file = new File("C:/Users/ok/Desktop/OOP_Cinema/MovieList.txt");
     if (!file.exists()) {
         System.out.println("Movie file does not exist.");
         return; 
@@ -115,7 +117,7 @@ public static void readMovie() {
 
 
 public static void writeMovie(){
-      File file = new File("C:/Users/ok/Desktop/MovieList.txt");
+      File file = new File("C:/Users/ok/Desktop/OOP_Cinema/MovieList.txt");
       try(ObjectOutputStream write = new ObjectOutputStream(new FileOutputStream(file))){ //Overwrites + ensures output is closed after try-catch statement 
        write.writeObject(movies);
 }catch (IOException e) {

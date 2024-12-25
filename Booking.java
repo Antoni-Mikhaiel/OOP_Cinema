@@ -3,60 +3,67 @@ import java.io.File;
 import java.util.ArrayList;
 import java.io.*;
 import java.util.*;
+import static javaapplication1.Guest.guests;
 
 public class Booking implements Serializable{
-    File file = new File("C:/Users/ok/Desktop/Bookings.txt"); 
+    File file = new File("C:/Users/Giza Ahmed Seif/Desktop/Bookings.txt"); 
 public static ArrayList<Booking> bookings=new ArrayList<>(); 
 
   //attributes
 private int bookingID; //Ticket ID
-private static int[][] seatsBooked; 
-private double rating; //price of show
-//private String guestname, showname;  //no need for guest name  or show name beacause you can fetch them from class guest & show
-
+private int numofseats; 
+private float rating; 
+private Guest guest;
 private transient Movie movie; // Make movie transient to prevent serialization
 private String movieName; // Store movieName explicitly
 private transient Show show; 
-private int hall;
-
+private float payment;
 //Constructor
-public Booking(Movie movie , Show show , int[][] seatsBooked , double rating){
+public Booking(Movie movie , Show show ,Guest guest,int numofseats,float payment){
     this.movie = movie;
     this.movieName = movie.getMovieName(); //at this point, eh lazmt el movie object? can just fetch it directly mel arraylist?
     this.show = show;
-    this.hall = show.getHall();
-    this.seatsBooked = seatsBooked;
-    this.rating = rating;
+    this.guest=guest;
+    //this.hall = show.getHall();
+    this.numofseats= numofseats;
+    createBookingID();
+    this.payment=payment;
 }
-
 public int getBookingID(){
 return bookingID;
 }
-public double getRating(){
+public float getRating(){
 return rating;
 }
-public int[][] getSeatsBooked(){
-return seatsBooked;
+public void setRating(float rating){
+    this.rating=rating;
+}
+public int getSeatsBooked(){
+return numofseats;
 }
 public String getMovieName(){
 return movie.getMovieName();
-//return movie.getMovieName();
+}
+public Movie getMovie(){
+    return this.movie;
 }
 
 public void createBookingID(){
     Random random = new Random();
-    bookingID = random.nextInt(999);
+    this.bookingID = random.nextInt(999);
 }
 
-public void writeBooking() throws FileNotFoundException{
-      try(ObjectOutputStream write = new ObjectOutputStream(new FileOutputStream(file))){ //Overwrites + ensures output is closed after try-catch statement 
-          write.writeObject(bookings);
+public static void writeBooking() throws FileNotFoundException{
+      File file = new File("C:/Users/Giza Ahmed Seif/Desktop/Booking.txt");
+      try(ObjectOutputStream write = new ObjectOutputStream(new FileOutputStream(file))){  
+       write.writeObject(bookings);
 }catch (IOException e) {
             System.out.println("Error writing file: " + e.getMessage());
         }
 }
      
-public void readBooking(File file) throws FileNotFoundException{
+public static void readBooking() throws FileNotFoundException{
+     File file = new File("C:/Users/Giza Ahmed Seif/Desktop/Booking.txt");
     if (!file.exists()) {
         System.out.println("Booking file does not exist.");
         return; 
@@ -70,10 +77,10 @@ public void readBooking(File file) throws FileNotFoundException{
 }
      
 //da 3shan el guest y view el details bt3to
-    //overload
-public String toString(int index){
-    return bookingID + "\n" +  Movie.movies.get(index).getMovieName() + "\n" + Show.shows.get(index).getHall()+ "\n" + Arrays.toString(seatsBooked) + "\n" + rating;
-}
+//    //overload
+//public String toString(int index){
+//    return bookingID + "\n" +  Movie.movies.get(index).getMovieName() + "\n" + Show.shows.get(index).getHall()+ "\n" + getSeatsBooked() + "\n" + rating;
+//}
 
 /*
 public void bookSeats(){

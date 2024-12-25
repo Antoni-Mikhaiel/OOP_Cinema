@@ -8,6 +8,6 @@ package javaapplication1;
  *
  * @author ok
  */
-public class antoni {
+class Label {
     
 }
