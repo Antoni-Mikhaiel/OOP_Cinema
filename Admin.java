@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javaapplication1.Movie;
+import java.time.Duration;
 import static javaapplication1.Movie.movies;
 
 
@@ -125,11 +126,18 @@ public class Admin{//extends receptionist
     String movieGenre = input.nextLine();
     
     System.out.println("Enter Movie Duration (mins): ");
-    int movieDuration = 0;
+    Duration movieDuration = null;
+    String formattedDuration = null;
     while (true) { // Validate integer input
         try {
-            movieDuration = Integer.parseInt(input.nextLine());
-            break;
+            int durationInMinutes = Integer.parseInt(input.nextLine());
+            movieDuration = Duration.ofMinutes(durationInMinutes); // Convert minutes to Duration
+            long hours = movieDuration.toHours();
+            long minutes = movieDuration.toMinutes() % 60; // Get remaining minutes after hours
+            long seconds = movieDuration.getSeconds() % 60; // Get remaining seconds after minutes
+            // Store duration as "HH:MM:SS"
+            formattedDuration = String.format("%d:%02d:%02d", hours, minutes, seconds);
+            break; // Exit the loop if input is valid
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter an integer for the duration.");
         }
@@ -146,7 +154,7 @@ public class Admin{//extends receptionist
         }
     }
 
-    Movie newMovie = new Movie(movieName, movieGenre, movieDuration, movieRating);
+    Movie newMovie = new Movie(movieName, movieGenre, formattedDuration, movieRating);
     
     //add object to ArrayList
     Movie.movies.add(newMovie);
@@ -174,9 +182,16 @@ public class Admin{//extends receptionist
     System.out.print("Enter new Duration (or press Enter to keep current): ");
     String newDurationInput = input.nextLine();
     if (!newDurationInput.trim().isEmpty()) {
+        String formattedDuration = null;
         try {
-            int newDuration = Integer.parseInt(newDurationInput);
-            Movie.movies.get(index).setMovieDuration(newDuration);
+            int durationInMinutes = Integer.parseInt(newDurationInput); //from string to int
+            Duration newDuration = Duration.ofMinutes(durationInMinutes); //from int to duration
+            long hours = newDuration.toHours();
+            long minutes = newDuration.toMinutes() % 60; // Get remaining minutes after hours
+            long seconds = newDuration.getSeconds() % 60; // Get remaining seconds after minutes
+            // Store duration as "HH:MM:SS"
+            formattedDuration = String.format("%d:%02d:%02d", hours, minutes, seconds);
+            Movie.movies.get(index).setMovieDuration(formattedDuration);
         } catch (NumberFormatException e) {
             System.out.println("Invalid duration input. Keeping current value.");
         }

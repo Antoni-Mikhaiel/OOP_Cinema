@@ -1,15 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaapplication1;
 
-import javafx.animation.*;
-import javafx.animation.TranslateTransition;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.geometry.*;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -27,6 +18,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import java.util.ArrayList;
 import javafx.beans.property.*;
+
 
 /**
  *
@@ -89,16 +81,18 @@ public class AddMoviesScene {
         genreColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMovieGenre()));
 
         TableColumn<Movie, String> durationColumn = new TableColumn<>("Duration");
-        //titleColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMovieDuration()));
+        durationColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMovieDuration()));
 
-        TableColumn<Movie, Integer> bookingsColumn = new TableColumn<>("Number of Bookings");
-       //titleColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMovieRevenue()));
+       TableColumn<Movie, Integer> bookingsColumn = new TableColumn<>("Bookings");
+       bookingsColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getMovieBooking()).asObject());
 
         TableColumn<Movie, Double> revenueColumn = new TableColumn<>("Revenue");
-       // revenueColumn.setCellValueFactory(cellData -> javafx.beans.property.SimpleDoubleProperty(cellData.getValue().getMovieRevenue()).asObject());
-
-        movieTable.getColumns().addAll(titleColumn, genreColumn, durationColumn, dateColumn, bookingsColumn, revenueColumn);
+        revenueColumn.setCellValueFactory(cellData -> new SimpleDoubleProperty(cellData.getValue().getMovieRevenue()).asObject());
+         
+       movieTable.getColumns().addAll(titleColumn, genreColumn, durationColumn, bookingsColumn, revenueColumn);
         movieTable.setPrefWidth(600);
+        Movie.readMovie();
+        movieTable.getItems().addAll(Movie.movies);
 
         VBox rightPane = new VBox(10, new TextField("Search"), movieTable);
         rightPane.setPadding(new Insets(20));

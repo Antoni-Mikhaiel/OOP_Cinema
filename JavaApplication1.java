@@ -12,8 +12,8 @@ import javafx.stage.Stage;
 public class JavaApplication1 extends Application{
     
     public static void main(String[] args) throws IOException {
-         launch(args);
-       /*  
+        // launch(args);
+        
         while(true){
         User user = new User();
         user.logIn();
@@ -30,7 +30,7 @@ public class JavaApplication1 extends Application{
                 break;
         }
         }
-*/
+
      
     }
     @Override

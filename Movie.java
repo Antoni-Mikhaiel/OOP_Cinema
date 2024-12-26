@@ -18,8 +18,7 @@ import java.time.Duration;
 
 
 public class Movie implements Serializable{
-    private String movieName , movieGenre;
-    private Duration movieDuration; 
+    private String movieName , movieGenre, movieDuration; 
     private int movieID , movieBooking ; //num of bookings per movie
     private double movieRating , movieRevenue;
     public static ArrayList<Movie> movies = new ArrayList();
@@ -28,7 +27,7 @@ public class Movie implements Serializable{
    public Movie() {
         movieName = null;
         movieGenre = null;
-        movieDuration = 0;
+        movieDuration = null;
         movieID = 0;
         movieRating = 0.0;
         movieRevenue = 0.0;
@@ -36,7 +35,7 @@ public class Movie implements Serializable{
         movieID = 0;
     }  
   
-    public Movie(String movieName , String movieGenre , int movieDuration ,double movieRating){
+    public Movie(String movieName , String movieGenre , String movieDuration ,double movieRating){
         this.movieName = movieName;
         this.movieGenre = movieGenre;
         this.movieDuration = movieDuration;
@@ -59,8 +58,8 @@ public class Movie implements Serializable{
     public String getMovieGenre(){
     return movieGenre;
     }
-    public int getMovieDuration(){
-    return movieDuration;
+    public String getMovieDuration(){
+    return movieDuration; 
     }
     public double getMovieRating(){
     return movieRating;
@@ -78,8 +77,8 @@ public class Movie implements Serializable{
     public void setMovieGenre(String movieGenre){
     this.movieGenre = movieGenre;
     }
-    public void setMovieDuration(int movieDuration){
-    this.movieDuration = movieDuration;
+    public void setMovieDuration(String movieDuration){
+   this.movieDuration = movieDuration;
     }
     public void setMovieRating(double movieRating){
     this.movieRating = movieRating;
@@ -98,8 +97,8 @@ public class Movie implements Serializable{
   
     @Override
   public String toString() { //toString must be public to avoid compiler error
-            return  movieID + "\n" + movieName + "\n" + movieGenre + "\n" + movieDuration + "\n"+ movieRating + "\n" + movieBooking + "\n" + movieRevenue; //so that when you write to file, booking & revenue isn't altered
-        }
+            return  movieID + "\n" + movieName + "\n" + movieGenre + "\n" + movieDuration + "\n"+ movieRating + "\n" + movieBooking + "\n" + movieRevenue; //so that when you write to file, booking & revenue isn't altered    
+  }
 
  
 public static void readMovie() { 
