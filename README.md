@@ -10,7 +10,7 @@
 - Role-based login: Admin and Receptionist
 
 📹 **Login Screen Demo**  
-![Login Demo](https://github.com/user-attachments/assets/5d4747d5-fd11-4e23-96a4-94fb02c2f47b/login-demo.gif)
+![login-demo](https://github.com/user-attachments/assets/49c2b827-acd8-4a27-bec4-a049a8faf617)
 
 ---
 
