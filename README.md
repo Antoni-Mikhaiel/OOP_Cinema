@@ -18,7 +18,7 @@
 
 #### 🎞️ Movie Management
 - Add, edit, delete movies
-- Each movie includes: **Cover Photo**, **Title**, **Genre**, **Duration**
+- Each movie includes: **Cover Photo**, **Title**, **Genre**, **Duration**, **Bookings**, **Revenue**
 
 📹 **Movie Management Demo**  
 ![Movie-Management](https://github.com/user-attachments/assets/c3a067fd-b39e-431b-97ff-458a4468fc90)
