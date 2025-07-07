@@ -55,9 +55,6 @@
 📹 **Ticket Booking Demo**  
 ![Ticket Booking](https://github.com/user-attachments/assets/bfc881e1-3c34-450e-b859-53d737b4e69f)
 
-🖼️ **Booking Screen Screenshot**  
-![Booking Screenshot](https://github.com/user-attachments/assets/d1384b40-2c75-4215-8918-0c4ea66becce)
-
 ---
 
 ## ⚙️ Technologies Used
