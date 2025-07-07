@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/b99fe62d-2807-4527-9ab1-25676817ba27
 # 🎬 MIU Cinema 🎟️
 
 **MIU Cinema** is a JavaFX-based desktop application designed to manage cinema operations with ease for both administrators and receptionists. From managing movies and screenings to booking tickets and handling accounts, MIU Cinema streamlines the whole process with a modern, user-friendly interface.
@@ -14,7 +12,6 @@ https://github.com/user-attachments/assets/b99fe62d-2807-4527-9ab1-25676817ba27
 📹 **Login Screen Demo**  
 ![Login Demo](https://github.com/user-attachments/assets/5d4747d5-fd11-4e23-96a4-94fb02c2f47b/login-demo.gif)
 
-
 ---
 
 ### 🛠️ Admin Panel
@@ -23,10 +20,8 @@ https://github.com/user-attachments/assets/b99fe62d-2807-4527-9ab1-25676817ba27
 - Add, edit, delete movies
 - Each movie includes: **Cover Photo**, **Title**, **Genre**, **Duration**
 
-📹 **Movie Management Video**  
+📹 **Movie Management Demo**  
 ![Movie Management](https://github.com/user-attachments/assets/abcd3978-57fd-461b-8196-ee57a4678882/movie-management.gif)
-
-
 
 ---
 
@@ -45,6 +40,7 @@ https://github.com/user-attachments/assets/b99fe62d-2807-4527-9ab1-25676817ba27
 
 🖼️ **Account Management Screenshot**  
 ![Account Management](https://github.com/user-attachments/assets/6e11ab21-98bf-4fd2-bc15-2570f175ad57)
+
 ---
 
 ### 🎫 Receptionist Panel
@@ -53,7 +49,7 @@ https://github.com/user-attachments/assets/b99fe62d-2807-4527-9ab1-25676817ba27
 - Browse available movies
 - Select seats and enter payment details
 
-📹 **Ticket Booking Video**  
+📹 **Ticket Booking Demo**  
 ![Ticket Booking](https://github.com/user-attachments/assets/75153f3d-ea39-4b2c-8c8f-243c950c2c1c/booking.gif)
 
 🖼️ **Booking Screen Screenshot**  
@@ -66,11 +62,13 @@ https://github.com/user-attachments/assets/b99fe62d-2807-4527-9ab1-25676817ba27
 - Java 23
 - JavaFX 24
 - FXML
+- SceneBuilder
+- MVC Architecture
 
 ---
 
 ## 🚀 How to Run
 
-1. Clone the repo:
+1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/miu-cinema.git
