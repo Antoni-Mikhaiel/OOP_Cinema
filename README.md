@@ -10,7 +10,7 @@
 - Role-based login: Admin and Receptionist
 
 📹 **Login Screen Demo**  
-![Login Video][(path/to/login-video.gif or link to) video](https://github.com/user-attachments/assets/5d4747d5-fd11-4e23-96a4-94fb02c2f47b)
+![Login Video](https://github.com/user-attachments/assets/5d4747d5-fd11-4e23-96a4-94fb02c2f47b)
 
 
 ---
@@ -22,7 +22,7 @@
 - Each movie includes: **Cover Photo**, **Title**, **Genre**, **Duration**
 
 📹 **Movie Management Video**  
-![Movie Management Video][(path/to/movie-management-video.gif or link to video)](https://github.com/user-attachments/assets/abcd3978-57fd-461b-8196-ee57a4678882)
+![Movie Management Video](path/to/movie-management-video.gif or link to video)](https://github.com/user-attachments/assets/abcd3978-57fd-461b-8196-ee57a4678882)
 
 
 ---
@@ -51,7 +51,7 @@
 - Select seats and enter payment details
 
 📹 **Ticket Booking Video**  
-![Booking Video][(path/to/booking-video.gif or link to video)](https://github.com/user-attachments/assets/75153f3d-ea39-4b2c-8c8f-243c950c2c1c)
+![Booking Video](https://github.com/user-attachments/assets/75153f3d-ea39-4b2c-8c8f-243c950c2c1c)
 
 🖼️ **Booking Screen Screenshot**  
 ![Booking Screenshot](https://github.com/user-attachments/assets/d1384b40-2c75-4215-8918-0c4ea66becce)
