@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/b99fe62d-2807-4527-9ab1-25676817ba27
 # 🎬 MIU Cinema 🎟️
 
 **MIU Cinema** is a JavaFX-based desktop application designed to manage cinema operations with ease for both administrators and receptionists. From managing movies and screenings to booking tickets and handling accounts, MIU Cinema streamlines the whole process with a modern, user-friendly interface.
@@ -10,7 +12,7 @@
 - Role-based login: Admin and Receptionist
 
 📹 **Login Screen Demo**  
-![Login Video](https://github.com/user-attachments/assets/5d4747d5-fd11-4e23-96a4-94fb02c2f47b)
+![Login Demo](https://github.com/user-attachments/assets/5d4747d5-fd11-4e23-96a4-94fb02c2f47b/login-demo.gif)
 
 
 ---
@@ -22,7 +24,7 @@
 - Each movie includes: **Cover Photo**, **Title**, **Genre**, **Duration**
 
 📹 **Movie Management Video**  
-![Movie Management Video](https://github.com/user-attachments/assets/abcd3978-57fd-461b-8196-ee57a4678882)
+![Movie Management](https://github.com/user-attachments/assets/abcd3978-57fd-461b-8196-ee57a4678882/movie-management.gif)
 
 
 
@@ -52,7 +54,7 @@
 - Select seats and enter payment details
 
 📹 **Ticket Booking Video**  
-![Booking Video](https://github.com/user-attachments/assets/75153f3d-ea39-4b2c-8c8f-243c950c2c1c)
+![Ticket Booking](https://github.com/user-attachments/assets/75153f3d-ea39-4b2c-8c8f-243c950c2c1c/booking.gif)
 
 🖼️ **Booking Screen Screenshot**  
 ![Booking Screenshot](https://github.com/user-attachments/assets/d1384b40-2c75-4215-8918-0c4ea66becce)
