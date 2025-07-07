@@ -22,7 +22,8 @@
 - Each movie includes: **Cover Photo**, **Title**, **Genre**, **Duration**
 
 📹 **Movie Management Video**  
-![Movie Management Video][(path/to/movie-management-video.gif or link to video)](https://github.com/user-attachments/assets/abcd3978-57fd-461b-8196-ee57a4678882)]
+![Movie Management Video](https://github.com/user-attachments/assets/abcd3978-57fd-461b-8196-ee57a4678882)
+
 
 
 ---
