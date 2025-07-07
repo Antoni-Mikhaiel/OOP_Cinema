@@ -21,7 +21,7 @@
 - Each movie includes: **Cover Photo**, **Title**, **Genre**, **Duration**
 
 📹 **Movie Management Demo**  
-![Movie Management](https://github.com/user-attachments/assets/abcd3978-57fd-461b-8196-ee57a4678882/movie-management.gif)
+![Movie-Management](https://github.com/user-attachments/assets/c3a067fd-b39e-431b-97ff-458a4468fc90)
 
 ---
 
@@ -41,6 +41,9 @@
 🖼️ **Account Management Screenshot**  
 ![Account Management](https://github.com/user-attachments/assets/6e11ab21-98bf-4fd2-bc15-2570f175ad57)
 
+> **Note:**  
+> This project is for educational/demo purposes. Passwords are shown for demonstration only.
+
 ---
 
 ### 🎫 Receptionist Panel
@@ -50,7 +53,7 @@
 - Select seats and enter payment details
 
 📹 **Ticket Booking Demo**  
-![Ticket Booking](https://github.com/user-attachments/assets/75153f3d-ea39-4b2c-8c8f-243c950c2c1c/booking.gif)
+![Ticket Booking](https://github.com/user-attachments/assets/bfc881e1-3c34-450e-b859-53d737b4e69f)
 
 🖼️ **Booking Screen Screenshot**  
 ![Booking Screenshot](https://github.com/user-attachments/assets/d1384b40-2c75-4215-8918-0c4ea66becce)
